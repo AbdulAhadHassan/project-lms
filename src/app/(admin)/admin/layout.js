@@ -13,8 +13,12 @@ export default function AdminLayout({ children }) {
             <Link href="/admin/batches"><TabsTrigger value="batches">Batches</TabsTrigger></Link>
             <Link href="/admin/courses"><TabsTrigger value="courses">Courses</TabsTrigger></Link>
           </TabsList>
+          <TabsContent value="courses">{children}</TabsContent>
+          <TabsContent value="dashboard">{children}</TabsContent>
+          <TabsContent value="trainers">{children}</TabsContent>
+          <TabsContent value="students">{children}</TabsContent>
+          <TabsContent value="batches">{children}</TabsContent>  
         </Tabs>
-        {children}
       </div>
     );
   }
