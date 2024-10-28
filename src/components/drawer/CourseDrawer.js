@@ -23,8 +23,8 @@ import {
 } from "@/components/ui/drawer"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-
-export function DrawerInput({ open, setOpen }) {
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+export function CourseDrawerInput({ open, setOpen }) {
   const isDesktop = true
 
   if (isDesktop) {
@@ -72,11 +72,7 @@ function ProfileForm({ className }) {
     <form className={cn("grid items-start gap-4", className)}>
       <div className="grid gap-2">
         <Label htmlFor="name"> Name</Label>
-        <Input type="text" id="name" defaultValue="" />
-      </div>
-      <div className="grid gap-2">
-        <Label htmlFor="available"> Available</Label>
-        <Input id="available" defaultValue="active" />
+        <Input required type="text" id="name" defaultValue="" />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="description"> Description</Label>
@@ -84,7 +80,22 @@ function ProfileForm({ className }) {
       </div>
       <div className="grid gap-2">
         <Label htmlFor="duration"> Duration</Label>
-        <Input id="duration" defaultValue="1 month" />
+        <Input required id="duration" defaultValue="" />
+      </div>
+      <div className="grid gap-2">
+      <RadioGroup defaultValue="comfortable">
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="Inactive" id="r1" />
+        <Label htmlFor="r1">Inactive</Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="Active" id="r2" />
+        <Label htmlFor="r2">Active</Label>
+      </div>
+  
+    </RadioGroup>
+      
+      
       </div>
       <Button type="submit">Add Course</Button>
     </form>
