@@ -47,13 +47,13 @@ export function CourseDrawerInput({ open, setOpen }) {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button variant="outline">Add Course</Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
           <DrawerTitle>Add Course</DrawerTitle>
           <DrawerDescription>
-            Make changes to your profile here. Click save when you're done.
+            Add a new course to the system
           </DrawerDescription>
         </DrawerHeader>
         <ProfileForm className="px-4" />

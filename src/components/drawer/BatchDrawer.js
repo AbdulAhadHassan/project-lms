@@ -56,13 +56,13 @@ export function BatchDrawerInput({ open, setOpen }) {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button variant="outline">Add Batch</Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
           <DrawerTitle>Add Batch</DrawerTitle>
           <DrawerDescription>
-            Make changes to your profile here. Click save when you're done.
+            Add a new batch to the system
           </DrawerDescription>
         </DrawerHeader>
         <ProfileForm className="px-4" />
